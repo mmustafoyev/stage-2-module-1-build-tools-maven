@@ -15,10 +15,8 @@
 
     <properties>
 
-        <junit.version>5.8.1</junit.version>
-        <maven.jar.plugin.version>2.2</maven.jar.plugin.version>
-        <maven.compiler.plugin.version>2.2</maven.compiler.plugin.version>
-        <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
+        <junit.version>5.9.3</junit.version>
+        <maven.jar.plugin.version>3.2.2</maven.jar.plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -44,12 +42,15 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.0</version>
             </plugin>
+
             <plugin>
-                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
-                <!-- something should be here-->
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
