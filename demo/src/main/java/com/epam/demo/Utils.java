@@ -14,11 +14,11 @@ public class Utils {
             if(!obj.isPositiveNumber(str))
                 return false;
         }
-        return false;
+        return true;
     }
 
     public static void main(String[] args) {
-        List<String> list =  List.of("-11.22", "0", "33", "87");
+        List<String> list =  List.of("1.22", "0", "33", "87");
         System.out.println(isAllPositiveNumbers(list));
     }
 }
